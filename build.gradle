@@ -1,0 +1,28 @@
+group 'WorkWithPostgreSQLGradle'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'

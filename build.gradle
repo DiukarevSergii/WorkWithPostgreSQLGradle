@@ -12,6 +12,7 @@ repositories {
 dependencies {
     compile "joda-time:joda-time:2.2"
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
+    compile 'mysql:mysql-connector-java:6.0.5'
 }
 
 jar {
